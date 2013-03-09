@@ -30,7 +30,7 @@
 ;; Question:
 ;; Generate an error message by evaluating an appropriate symbol that is not
 ;; within parentheses.
-
+;;
 ;; Solution: Mark the following expression, press `M-x eval-region', it gives an
 ;; error message: "Symbol's value as variable is void: +"
 +
