@@ -1,5 +1,5 @@
-;; ch02.el --- Solutions to the exercises in chapter 2 of the `An Introduction
-;; to Programming in Emacs Lisp'
+;;; ch02.el --- Solutions to the exercises in chapter 2 of the `An Introduction
+;;; to Programming in Emacs Lisp'
 
 ;; Copyright (C) 2013 Ren Wenshan
 
