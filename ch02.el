@@ -4,7 +4,6 @@
 ;; Copyright (C) 2013 Ren Wenshan
 
 ;; Author: Ren Wenshan <renws1990@gmail.com>
-;; Keywords: Emacs Lisp
 ;; URL: https://github.com/RenWenshan/emacs-lisp-intro-solutions
 
 ;; This program is free software; you can redistribute it and/or modify
