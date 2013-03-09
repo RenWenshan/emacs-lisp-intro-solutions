@@ -1,28 +1,38 @@
 #+TITLE: 《An Introduction to Programming in Emacs Lisp》——习题答案
 #+AUTHOR: 任文山 <renws1990@gmail.com>
 
-《An Introduction to Programming in Emacs Lisp》（简称elisp intro）是Emacs自带的
-Emacs Lisp入门手册。
+《An Introduction to Programming in Emacs Lisp》（以下简称elisp intro）,是Emacs自
+带的elisp入门手册。
 
-在Emacs中 =M-x info= ，然后搜索“Emacs Lisp Intro”，即可开始阅读该手册。
+在Emacs中，输入 =M-x info= ，然后搜索“Emacs Lisp Intro”，点进去，即可开始阅读该书。
+在Emacs中阅读的好处：
+- 跳转、搜索、添加书签等操作很方便。
+- 可以随时运行书中的示例程序。
 
 
-包括以下几章的习题答案：
+本repository收集了我在读此书的过程中写的练习题答案，包括：
 
-- 第1章: List Processing
-- 第2章: Practicing Evaluation
-- 第3章: How To Write Function Definitions
-- 第4章: A Few Buffer-Related Functions
-- 第5章: A Few More Complex Functions
-- 第6章: Narrowing and Widening
-- 第7章: `car', `cdr', `cons': Fundamental Functions
-- 第8章: Cutting and Storing Text
-- 第9章: How List are Implemented
-- 第10章: Yanking Text Back
-- 第11章: Looping
-- 第12章: Regular Expression Searches
-- 第13章: Counting: Repetition and Regexps
-- 第15章: Readying a Graph
-- 第17章: Debugging
+- 第1章: List Processing -- ch01.el
+- 第2章: Practicing Evaluation -- ch02.el
+- 第3章: How To Write Function Definitions -- ch03.el
+- 第4章: A Few Buffer-Related Functions -- ch04.el
+- 第5章: A Few More Complex Functions -- ch05.el
+- 第6章: Narrowing and Widening -- ch06.el
+- 第7章: `car', `cdr', `cons': Fundamental Functions -- ch07.el
+- 第8章: Cutting and Storing Text -- ch08.el
+- 第9章: How List are Implemented -- ch09.el
+- 第10章: Yanking Text Back -- ch10.el
+- 第11章: Looping -- ch11.el
+- 第12章: Regular Expression Searches -- ch12.el
+- 第13章: Counting: Repetition and Regexps -- ch13.el
+- 第15章: Readying a Graph -- ch15.el
 
-*注*: elisp intro的14、16两章是没有习题的
+*注*:
+- elisp intro的14、16两章是没有习题的
+- 第17章的习题不是编程题，只需跟着题目进行操作即可
+
+
+本人菜鸟一只，elisp更是初学，加上英语不好，程序中很可能出现各种问题，如果发现，还
+望指正，不胜感激。
+
+Happy Hacking!

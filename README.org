@@ -1,2 +1,48 @@
 #+TITLE: An Introduction to Programming in Emacs Lisp -- Solutions
 #+AUTHOR: Ren Wenshan <renws1990@gmail.com>
+
+`An Introduction to Programming in Emacs Lisp' (elisp intro) is a manual that
+comes with Emacs for programming beginners.
+
+In Emacs, press =M-x info=, then search for "Emacs Lisp Intro", now you should
+be able to read it by simply clicking the result that is found by Emacs. The
+benefits of reading this manual in Emacs are:
+
+- Operations such navigation, searching, adding bookmarks and so on are very
+  convenient.
+- You can run the examples in the book when you read it, which is super handy.
+
+
+This repository is a collection of my solutions to the exercises in the `elisp
+intro', including:
+
+|---------+---------------------------------------------+--------------------|
+| Chapter | Chapter Title                               | Corresponding File |
+|---------+---------------------------------------------+--------------------|
+|       1 | List Processing                             | ch01.el            |
+|       2 | Practicing Evaluation                       | ch02.el            |
+|       3 | How To Write Function Definitions           | ch03.el            |
+|       4 | A Few Buffer-Related Functions              | ch04.el            |
+|       5 | A Few More Complex Functions                | ch05.el            |
+|       6 | Narrowing and Widening                      | ch06.el            |
+|       7 | `car', `cdr', `cons': Fundamental Functions | ch07.el            |
+|       8 | Cutting and Storing Text                    | ch08.el            |
+|       9 | How List are Implemented                    | ch09.el            |
+|      10 | Yanking Text Back                           | ch10.el            |
+|      11 | Looping                                     | ch11.el            |
+|      12 | Regular Expression Searches                 | ch12.el            |
+|      13 | Counting: Repetition and Regexps            | ch13.el            |
+|      15 | Readying a Graph                            | ch15.el            |
+|---------+---------------------------------------------+--------------------|
+
+*Note*:
+- Chapter 14 and chapter 16 do not have exercises.
+- The exercises in chapter 17 are not programming tasks, you can finish them by
+  following the questions.
+
+
+I am just a beginner of elisp, and my poor English skills might caused some
+misunderstanding of the exercises. Please feel free to point out any mistakes
+you might find.
+
+Happy Hacking!
