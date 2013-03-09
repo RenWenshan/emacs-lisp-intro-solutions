@@ -16,3 +16,4 @@ Emacs Lisp入门手册。
 - 第5章: A Few More Complex Functions
 - 第6章: Narrowing and Widening
 - 第7章: `car', `cdr', `cons': Fundamental Functions
+- 第8章: Cutting and Storing Text
