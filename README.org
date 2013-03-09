@@ -16,7 +16,6 @@ benefits of reading this manual in Emacs are:
 This repository is a collection of my solutions to the exercises in the `elisp
 intro', including:
 
-|---------+---------------------------------------------+--------------------|
 | Chapter | Chapter Title                               | Corresponding File |
 |---------+---------------------------------------------+--------------------|
 |       1 | List Processing                             | ch01.el            |
@@ -33,7 +32,7 @@ intro', including:
 |      12 | Regular Expression Searches                 | ch12.el            |
 |      13 | Counting: Repetition and Regexps            | ch13.el            |
 |      15 | Readying a Graph                            | ch15.el            |
-|---------+---------------------------------------------+--------------------|
+
 
 *Note*:
 - Chapter 14 and chapter 16 do not have exercises.
