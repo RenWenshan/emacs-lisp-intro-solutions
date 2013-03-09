@@ -7,7 +7,7 @@ Emacs Lisp入门手册。
 在Emacs中 =M-x info= ，然后搜索“Emacs Lisp Intro”，即可开始阅读该手册。
 
 
-包括以下几章的习题答案（elisp intro有些章节是没有习题的）：
+包括以下几章的习题答案：
 
 - 第1章: List Processing
 - 第2章: Practicing Evaluation
@@ -17,3 +17,12 @@ Emacs Lisp入门手册。
 - 第6章: Narrowing and Widening
 - 第7章: `car', `cdr', `cons': Fundamental Functions
 - 第8章: Cutting and Storing Text
+- 第9章: How List are Implemented
+- 第10章: Yanking Text Back
+- 第11章: Looping
+- 第12章: Regular Expression Searches
+- 第13章: Counting: Repetition and Regexps
+- 第15章: Readying a Graph
+- 第17章: Debugging
+
+*注*: elisp intro的14、16两章是没有习题的
