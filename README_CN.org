@@ -2,7 +2,7 @@
 #+AUTHOR: 任文山 <renws1990@gmail.com>
 
 《An Introduction to Programming in Emacs Lisp》（以下简称elisp intro）,是Emacs自
-带的elisp入门手册。
+带的elisp入门手册。我对此书的具体评价，请见： http://wenshanren.org/?p=213
 
 在Emacs中，输入 =M-x info= ，然后搜索“Emacs Lisp Intro”，点进去，即可开始阅读该书。
 在Emacs中阅读的好处：
