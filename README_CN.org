@@ -1,0 +1,7 @@
+#+TITLE: 《An Introduction to Programming in Emacs Lisp》——习题答案
+#+AUTHOR: 任文山 <renws1990@gmail.com>
+
+《An Introduction to Programming in Emacs Lisp》（简称elisp intro）是Emacs自带的
+Emacs Lisp入门手册。
+
+在Emacs中 =M-x info= ，然后搜索“Emacs Lisp Intro”，即可开始阅读该手册。

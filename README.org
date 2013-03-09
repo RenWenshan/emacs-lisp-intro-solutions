@@ -1,0 +1,2 @@
+#+TITLE: An Introduction to Programming in Emacs Lisp -- Solutions
+#+AUTHOR: Ren Wenshan <renws1990@gmail.com>
