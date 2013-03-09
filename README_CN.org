@@ -13,3 +13,4 @@ Emacs Lisp入门手册。
 - 第2章: Practicing Evaluation
 - 第3章: How To Write Function Definitions
 - 第4章: A Few Buffer-Related Functions
+- 第5章: A Few More Complex Functions
