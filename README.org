@@ -2,7 +2,8 @@
 #+AUTHOR: Ren Wenshan <renws1990@gmail.com>
 
 `An Introduction to Programming in Emacs Lisp' (elisp intro) is a manual that
-comes with Emacs for programming beginners.
+comes with Emacs for programming beginners. This is my review of Elisp Intro:
+http://wenshanren.org/?p=217
 
 In Emacs, press =M-x info=, then search for "Emacs Lisp Intro", now you should
 be able to read it by simply clicking the result that is found by Emacs. The
