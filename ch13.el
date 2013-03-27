@@ -34,11 +34,10 @@
 ;; Solution:
 
 ;; `while' loop version
-(defun wenshan-count-punctuation-marks-in-reion (beginning end)
+(defun wenshan-count-punctuation-marks-in-region (beginning end)
   "Print the number of punctuation marks in the region using while."
   (interactive "r")
-  (message "Counting punctuation marks in region ... ")
-
+  (message "Counting punctuation marks in region...")
   ;; 1. Set up appropriate conditions.
   (save-excursion
     (let ((count 0))
@@ -62,7 +61,7 @@
 
 
 ;; recursion version
-(defun wenshan-count-punctuation-marks-in-reion-helper (region-end)
+(defun wenshan-count-punctuation-marks-in-region-helper (region-end)
   "Number of punctuation marks between point and REGION-END."
 
   ;; 1. do-again-test
@@ -70,18 +69,18 @@
            (re-search-forward "[.,;:!?]" region-end t))
 
       ;; 2. then-part: the recursive call
-      (1+ (wenshan-count-punctuation-marks-in-reion-helper region-end))
+      (1+ (wenshan-count-punctuation-marks-in-region-helper region-end))
 
     ;; 3. else-part
     0))
 
-(defun wenshan-count-punctuation-marks-in-reion-init (beginning end)
+(defun wenshan-count-punctuation-marks-in-region-init (beginning end)
   "Print number of punctuation marks in the region using recursion."
   (interactive "r")
   (message "Counting punctuation marks in region ... ")
   (save-excursion
     (goto-char beginning)
-    (let ((count (wenshan-count-punctuation-marks-in-reion-helper end)))
+    (let ((count (wenshan-count-punctuation-marks-in-region-helper end)))
       (cond ((zerop count)
              (message
               "The region does NOT have any punctuation mark."))
