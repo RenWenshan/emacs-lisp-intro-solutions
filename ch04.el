@@ -32,7 +32,8 @@
 ;;
 ;; Solution:
 (defun wenshan-simplified-end-of-buffer ()
-  "Move point to the end of current buffer"
+  "Move point to the end of current buffer;
+leave mark at previous position."
   (interactive)
   (push-mark)
   (goto-char (point-max)))
@@ -47,12 +48,13 @@
 ;;
 ;; Solution:
 (defun wenshan-buffer-exists-p (buffer)
+  "Check if BUFFER exists."
   (interactive
-   (list (read-buffer "buffer name: " (other-buffer
+   (list (read-buffer "Buffer name: " (other-buffer
                                        (current-buffer) t))))
   (if (get-buffer buffer)
-      (message "buffer exists!")
-    (message "buffer not exist!!!")))
+      (message "Buffer `%s' exists" buffer)
+    (message "Buffer `%s' does not exist" buffer)))
 
 
 ;; Exercise 3
@@ -61,4 +63,4 @@
 ;; Question:
 ;; Using `find-tag', find the source for the `copy-to-buffer' function.
 ;;
-;; Solution: press "M-. copy-to-buffer", then choose the appropriate TAGS file
+;; Solution: press "M-. copy-to-buffer RET", then choose the appropriate TAGS file
