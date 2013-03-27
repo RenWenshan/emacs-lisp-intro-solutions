@@ -45,9 +45,8 @@
 ;;
 ;; Solution:
 (defun wenshan-display-first-60-chars ()
-  "Display the first 60 characters of the current buffer"
+  "Display the first 60 characters of the current buffer."
   (interactive)
   (save-restriction
     (widen)
-    (save-excursion
-      (message (buffer-substring 1 60)))))
+    (message (buffer-substring 1 60))))
