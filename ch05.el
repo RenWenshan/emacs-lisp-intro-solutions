@@ -34,10 +34,9 @@
 ;;
 ;; Solution: press "C-u NUM M-x wenshan-compare-with-fill-column"
 (defun wenshan-compare-with-fill-column (&optional num)
+  "Compare prefix arg NUM with `fill-column'."
   (interactive "P")
-  (if (>= (or (prefix-numeric-value num)
-              56)
-          fill-column)
-      (message
-       "Your argument is greater than or eqaul to the value of `fill-column'")
-    (message "Your argument is less than the vlaue of `fill-column'")))
+  (setq num (if num (prefix-numeric-value num) 56))
+  (if (>= num fill-column)
+      (message "%d is greater than or eqaul to `fill-column'" num)
+    (message "%d is less than `fill-column'" num)))

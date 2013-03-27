@@ -43,8 +43,8 @@
 ;; parentheses.
 ;;
 ;; Solution: Mark the following expression, press `M-x eval-region', it gives an
-;; error message: "Invalid function: 5"
-(5)
+;; error message: "Invalid function: foo"
+(foo)
 
 
 ;; Exercise 3

@@ -45,5 +45,11 @@
 ;; replace the first element of the list
 (setcar wenshan-birds 'liyu)
 
+;; Evaluate the list to see the list of birds has changed:
+wenshan-birds
+
 ;; replace the rest of the list with a list of other fish
 (setcdr wenshan-birds '(lianyu heiyu jiyu))
+
+;; Evaluate the list to see the list of birds has changed:
+wenshan-birds

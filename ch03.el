@@ -31,15 +31,14 @@
 ;; number.  Make that function interactive.
 ;;
 ;; Solution:
-(defun wenshan-double (value)
-  "double `value'"
+(defun wenshan-double-function (value)
+  "Double VALUE."
   (* 2 value))
 
-(defun wenshan-double-interactive (value)
-  "double `value'"
+(defun wenshan-double-command (value)
+  "Double VALUE."
   (interactive "p")
-  (message "The doubled value is %d" (* 2 value))
-  (* 2 value))
+  (message "The result is %d" (* 2 value)))
 
 
 ;; Exercise 2
@@ -52,12 +51,8 @@
 ;;
 ;; Solution:
 (defun wenshan-greater-than-fill-column-p (number)
-  "test if the current value of `fill-column' is greater than NUMBER"
+  "Test if the current value of `fill-column' is greater than NUMBER."
   (interactive "p")
   (if (> number fill-column)
-      (progn
-        (message "%d is greater than `fill-column'" number)
-        t)
-    (progn
-      (message "%d is less than `fill-column'" number)
-      nil)))
+      (message "%d is greater than `fill-column'" number)
+    (message "%d is less than `fill-column'" number)))

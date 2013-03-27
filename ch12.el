@@ -32,12 +32,10 @@
 ;;
 ;; Solution:
 (defun wenshan-search-for-blank-lines (arg)
-  "Search for two or more blank lines in sequence"
+  "Search for two or more blank lines in sequence."
   (interactive "p")
   (or arg (setq arg 1))
-  (search-forward-regexp "^
-
-+" nil nil arg))
+  (search-forward-regexp "^\n\n+" nil nil arg))
 
 
 ;; Exercise 2
@@ -47,7 +45,7 @@
 ;;
 ;; Solution:
 (defun wenshan-search-for-duplicated-words (arg)
-  "Search for duplicated words"
+  "Search for duplicated words."
   (interactive "p")
   (or arg (setq arg 1))
   (search-forward-regexp "\\(\\<\\w+\\>\\) \\1" nil nil arg))

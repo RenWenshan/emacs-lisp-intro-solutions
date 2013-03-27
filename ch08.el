@@ -34,12 +34,11 @@
 ;; with Emacs.  Use a name such as `test-search' instead.)
 ;;
 ;; Solution:
-(defun wenshan-test-search (string-to-search)
-  "Search current buffer for `string-to-search' and display
-`Found' if succeed"
+(defun wenshan-test-search (string)
+  "Search current buffer for STRING and display `Found!' if succeed."
   (interactive
    ;; read in `string-to-search'
-   (list (read-string "wenshan-test-search: ")))
+   (list (read-string "Search: ")))
   (goto-char (point-min))
-  (when (search-forward string-to-search)
+  (when (search-forward string)
     (message "Found!")))

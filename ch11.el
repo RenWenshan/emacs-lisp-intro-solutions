@@ -32,8 +32,10 @@
 ;;
 ;; Solution:
 (defun wenshan-triangle (number-of-rows)
-  "triangle in which each row has a value which is the square of
-the row number"
+  "Add the square of the number of pebbles in each row of a triangle.
+The first row has one pebble, the second row two pebbles,
+the third row three pebbles, and so on.
+The argument is NUMBER-OF-ROWS."
   (let ((total 0)
         (row-number 1))
     (while (<= row-number number-of-rows)
@@ -41,6 +43,9 @@ the row number"
       (setq row-number (1+ row-number)))
     total))
 
+(wenshan-triangle 4)
+
+(wenshan-triangle 7)
 
 ;; Exercise 2
 ;; ----------
@@ -51,7 +56,10 @@ the row number"
 ;;
 ;; Solution:
 (defun wenshan-triangle-mul (number-of-rows)
-  "triangle that multiplies instead of adds the values"
+  "Multiply the number of pebbles in each row of a triangle.
+The first row has one pebble, the second row two pebbles,
+the third row three pebbles, and so on.
+The argument is NUMBER-OF-ROWS."
   (let ((total 1)
         (row-number 1))
     (while (<= row-number number-of-rows)
@@ -59,6 +67,9 @@ the row number"
       (setq row-number (1+ row-number)))
     total))
 
+(wenshan-triangle-mul 4)
+
+(wenshan-triangle-mul 7)
 
 ;; Exercise 3
 ;; ----------
@@ -71,8 +82,10 @@ the row number"
 
 ;; recursive version of exercise 1
 (defun wenshan-triangle-init (number-of-rows)
-  "triangle in which each row has a value which is the square of
-the row number using `cond'"
+  "Add the square of the number of pebbles in each row of a triangle.
+The first row has one pebble, the second row two pebbles,
+the third row three pebbles, and so on.
+The argument is NUMBER-OF-ROWS."
   (wenshan-triangle-helper 0 1 number-of-rows))
 
 (defun wenshan-triangle-helper (sum counter number-of-rows)
@@ -84,7 +97,10 @@ the row number using `cond'"
 
 ;; recursive version of exercise 2
 (defun wenshan-triangle-mul-init (number-of-rows)
-  "triangle that multiplies instead of adds the values"
+  "Multiply the number of pebbles in each row of a triangle.
+The first row has one pebble, the second row two pebbles,
+the third row three pebbles, and so on.
+The argument is NUMBER-OF-ROWS."
   (wenshan-triangle-mul-helper 1 1 number-of-rows))
 
 (defun wenshan-triangle-mul-helper (product counter number-of-rows)
@@ -97,33 +113,28 @@ the row number using `cond'"
 
 ;; Exercise 4
 ;; ----------
-;;
+
 ;; Question:
 ;; Write a function for Texinfo mode that creates an index entry at the
-;; beginning of a paragraph for every `@dfn' within the paragraph.  (In a
-;; Texinfo file, `@dfn' marks a definition.  This book is written in Texinfo.)
-;;
-;; (dirty) Solution:
+;; beginning of a paragraph for every `@dfn{bar}' within the paragraph.  (In a
+;; Texinfo file, `@dfn{poo}' marks a definition.  This book is written in Texinfo.)
+
 (defun wenshan-create-index-for-dfn ()
   "Create an index entry at the beginning of the paragraph for every `@dfn'."
   (interactive)
   (save-excursion
-    ;; mark-paragraph puts the point at the beginning of the paragraph
     (mark-paragraph)
     (save-restriction
       (narrow-to-region (point) (mark))
-      ;; create an dfn list
-      (setq dfn-list '())
-
-      (while (search-forward-regexp "@dfn{.+?}" nil t)
-        (let ((end (point))
-              (start (search-backward "@")))
-          (setq dfn-list (cons (buffer-substring start end) dfn-list)))
-        (search-forward-regexp "@dfn{.+?}") nil t)
-
-      ;; insert each dfn
-      (while (> (length dfn-list) 0)
-        ;; go back to the beginning of the paragraph
+      (let (dfns)
+	(while (search-forward "@dfn" nil t)
+	  (when (search-forward "{" nil t)
+	    (let ((start (point)))
+	      (when (search-forward "}" nil t)
+		(forward-char -1)
+		(let ((end (point)))
+		  (setq dfns (cons (buffer-substring start end)
+				   dfns)))))))
         (forward-paragraph -1)
-        (insert (concat (car dfn-list) "\n"))
-        (setq dfn-list (cdr dfn-list))))))
+	(dolist (dfn dfns)
+	  (insert (concat "@cindex " dfn "\n")))))))
