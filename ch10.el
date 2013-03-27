@@ -41,8 +41,8 @@ kill-ring-max
 ;; test whether the kill ring is full or not
 (= kill-ring-max (length kill-ring))
 
-;; keep more blocks of text in the kill ring
-(setq kill-ring-max 100)
+;; could you keep more blocks of text in the kill ring
+(- kill-ring-max (length kill-ring))
 
 
 ;; Exercise 2
