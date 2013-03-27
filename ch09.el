@@ -33,11 +33,17 @@
 ;;
 ;; Solution:
 
-;; set `followers' to `violet' and `buttercup'
+;; set `flowers' to `violet' and `buttercup'
 (setq flowers '("violet" "buttercup"))
+
+;; evaluate the list to see the list of flowers:
+flowers
 
 ;; cons two more flowers on to this list
 (setq more-flowers (cons "JuHua" (cons "KuiHua" flowers)))
+
+;; evaluate the list to see the new list of flowers:
+more-flowers
 
 ;; set the car of `flowers' to a fish
 (setcar flowers "LiYu")
