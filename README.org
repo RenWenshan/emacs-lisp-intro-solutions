@@ -46,3 +46,6 @@ misunderstanding of the exercises. Please feel free to point out any mistakes
 you might find.
 
 Happy Hacking!
+
+* Contributors
+  - Aaron S. Hawley <[[https://github.com/ashawley]]>

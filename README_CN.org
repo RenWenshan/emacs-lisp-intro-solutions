@@ -36,3 +36,6 @@
 望指正，不胜感激。
 
 Happy Hacking!
+
+* 贡献者
+  - Aaron S. Hawley <[[https://github.com/ashawley]]>
