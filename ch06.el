@@ -49,4 +49,4 @@
   (interactive)
   (save-restriction
     (widen)
-    (message (buffer-substring 1 60))))
+    (message (buffer-substring-no-properties 1 60))))
