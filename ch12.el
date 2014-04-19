@@ -48,4 +48,10 @@
   "Search for duplicated words."
   (interactive "p")
   (or arg (setq arg 1))
-  (search-forward-regexp "\\(\\<\\w+\\>\\) \\1" nil nil arg))
+  (push-mark)
+  ;; This regexp is not perfect
+  ;; but is fairly good over all:
+  (if (re-search-forward
+       "\\b\\([^@ \n\t]+\\)[ \n\t]+\\1\\b" nil 'move)
+      (message "Found duplicated word.")
+    (message "End of buffer")))
